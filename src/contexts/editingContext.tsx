@@ -3,9 +3,8 @@
 import React, { ReactNode, useState } from "react"
 
 interface EditingContextState {
-  count?: number,
-  setCount?: React.Dispatch<React.SetStateAction<number>>,
-  luckyNumber: number
+  count: number,
+  setCount: React.Dispatch<React.SetStateAction<number>>,
 }
 
 export const EditingContext = React.createContext<EditingContextState | undefined>(undefined)
@@ -21,7 +20,8 @@ export const EditingContextProvider: React.FC<ContextProviderProps> = ({ childre
   return <EditingContext.Provider
     value={
       {
-        luckyNumber: 4
+        count,
+        setCount
       }
     }
   >

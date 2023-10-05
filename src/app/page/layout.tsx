@@ -1,5 +1,5 @@
 
-import Provider from "@/contexts/Provider"
+import EditingBar from "@/components/editingBar"
 import { EditingContextProvider } from "@/contexts/editingContext"
 
 interface LayoutProps {
@@ -9,10 +9,10 @@ interface LayoutProps {
 export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <Provider>
-        <h1>Hello</h1>
+      <EditingContextProvider>
+        <EditingBar />
         {children}
-      </Provider>
+      </EditingContextProvider>
     </>
   )
 }
