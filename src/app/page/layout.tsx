@@ -1,4 +1,3 @@
-
 import EditingBar from "@/components/editingBar"
 import { EditingContextProvider } from "@/contexts/editingContext"
 

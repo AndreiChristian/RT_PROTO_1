@@ -3,8 +3,10 @@
 import React, { ReactNode, useState } from "react"
 
 interface EditingContextState {
-  count: number,
-  setCount: React.Dispatch<React.SetStateAction<number>>,
+  title: string,
+  setTitle: React.Dispatch<React.SetStateAction<string>>,
+  subtitle: string,
+  setSubtitle: React.Dispatch<React.SetStateAction<string>>,
 }
 
 export const EditingContext = React.createContext<EditingContextState | undefined>(undefined)
@@ -15,13 +17,16 @@ export interface ContextProviderProps {
 
 export const EditingContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
 
-  const [count, setCount] = useState(0)
+  const [title, setTitle] = useState("Andrei")
+  const [subtitle, setSubtitle] = useState("")
 
   return <EditingContext.Provider
     value={
       {
-        count,
-        setCount
+        title,
+        setTitle,
+        subtitle,
+        setSubtitle
       }
     }
   >

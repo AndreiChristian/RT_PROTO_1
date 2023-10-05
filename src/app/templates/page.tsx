@@ -10,12 +10,12 @@ const templates: Template[] = [
   {
     id: "1",
     name: "Basic Light",
-    path: "/templates/1"
+    path: "/page/1"
   },
   {
     id: "2",
     name: "Basic Dark",
-    path: "/templates/2"
+    path: "/page/2"
   }
 ]
 
